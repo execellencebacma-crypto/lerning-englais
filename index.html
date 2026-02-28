@@ -1,0 +1,1109 @@
+                                                                                                                                               <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموسوعة الشاملة لتعلم الإنجليزية · English Zone</title>
+    <style>
+        /* ========== الأساسيات ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+            background: linear-gradient(145deg, #f0f7ff 0%, #e6f0fa 100%);
+            color: #1a2b3c;
+            line-height: 1.8;
+        }
+
+        /* ========== الهيدر ========== */
+        .header {
+            background: linear-gradient(135deg, #003153 0%, #0a4b78 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .logo span {
+            background: #ffb347;
+            color: #003153;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #ffb347;
+            color: #003153;
+        }
+
+        /* ========== الحاوية الرئيسية ========== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* ========== بطاقات الترحيب ========== */
+        .welcome-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .welcome-card {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 30px rgba(0,49,83,0.1);
+            border-right: 10px solid #ffb347;
+        }
+
+        .welcome-card h2 {
+            font-size: 2.2rem;
+            color: #003153;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-card {
+            background: linear-gradient(145deg, #003153, #0a4b78);
+            color: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffb347;
+        }
+
+        /* ========== أقسام المحتوى ========== */
+        .section-title {
+            font-size: 2.2rem;
+            color: #003153;
+            margin: 3rem 0 2rem 0;
+            border-bottom: 4px solid #ffb347;
+            padding-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title:before {
+            content: "📚";
+            margin-left: 1rem;
+        }
+
+        /* ========== بطاقات الدروس ========== */
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 35px rgba(0,49,83,0.2);
+            border-color: #ffb347;
+        }
+
+        .card-header {
+            background: linear-gradient(145deg, #003153, #1e5a84);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 4px solid #ffb347;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-content h3 {
+            color: #003153;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ffb347;
+            padding-bottom: 0.5rem;
+        }
+
+        /* ========== جداول الكلمات ========== */
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .word-table th {
+            background: #003153;
+            color: white;
+            padding: 1rem;
+            text-align: right;
+            font-size: 1.1rem;
+        }
+
+        .word-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 1.1rem;
+        }
+
+        .word-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .word-table tr:hover {
+            background: #fff3e0;
+        }
+
+        .english-word {
+            font-weight: 600;
+            color: #003153;
+        }
+
+        .arabic-word {
+            color: #28a745;
+        }
+
+        .pronunciation {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* ========== قوائم الكلمات ========== */
+        .word-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .word-list li {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px dashed #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .word-list li:hover {
+            background: #f0f7ff;
+        }
+
+        .word-icon {
+            width: 30px;
+            height: 30px;
+            background: #ffb347;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #003153;
+        }
+
+        /* ========== جداول القواعد ========== */
+        .grammar-box {
+            background: #f0f7ff;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid #cce5ff;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+
+        .grammar-table th {
+            background: #003153;
+            color: white;
+            padding: 1rem;
+            text-align: right;
+        }
+
+        .grammar-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* ========== أمثلة وجمل ========== */
+        .example-box {
+            background: #fff9f0;
+            border-radius: 15px;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0;
+            border-right: 5px solid #ffb347;
+            font-size: 1.1rem;
+        }
+
+        .example-english {
+            color: #003153;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-arabic {
+            color: #28a745;
+        }
+
+        /* ========== التمارين التفاعلية ========== */
+        .practice-section {
+            background: linear-gradient(145deg, #003153, #0a4b78);
+            border-radius: 40px;
+            padding: 3rem;
+            margin: 3rem 0;
+            color: white;
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .exercise-card {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            color: #003153;
+        }
+
+        .exercise-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .exercise-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .exercise-option {
+            background: #f0f7ff;
+            border: 2px solid #e0e0e0;
+            padding: 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: right;
+        }
+
+        .exercise-option:hover {
+            background: #ffb347;
+            color: #003153;
+            border-color: #ffb347;
+        }
+
+        .exercise-feedback {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-radius: 15px;
+            color: #28a745;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* ========== الموارد ========== */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .resource-item {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        }
+
+        .resource-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== الفوتر ========== */
+        .footer {
+            background: #1b2f40;
+            color: #cbdbe9;
+            padding: 3rem;
+            margin-top: 4rem;
+            border-top: 6px solid #ffb347;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* ========== تصميم متجاوب ========== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .welcome-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== الهيدر ========== -->
+<header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <h1>📚 الموسوعة الشاملة <span>لتعلم الإنجليزية</span></h1>
+        </div>
+        <div class="nav-links">
+            <a href="#basics">الأساسيات</a>
+            <a href="#vocabulary">المفردات</a>
+            <a href="#grammar">القواعد</a>
+            <a href="#conversation">المحادثة</a>
+            <a href="#exercises">التمارين</a>
+            <a href="#resources">الموارد</a>
+        </div>
+    </div>
+</header>
+
+<!-- ========== المحتوى الرئيسي ========== -->
+<main class="container">
+
+    <!-- ========== قسم الترحيب والإحصائيات ========== -->
+    <section class="welcome-section">
+        <div class="welcome-card">
+            <h2>🌟 مرحباً بك في رحلتك لتعلم الإنجليزية</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">موقعك الشامل لتعلم اللغة الإنجليزية من الصفر حتى الاحتراف. نقدم لك أكثر من 2000 كلمة وعبارة، قواعد شاملة، محادثات واقعية، وتمارين تفاعلية.</p>
+        </div>
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-number">2000+</div>
+                <div>كلمة وعبارة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div>درس قواعد</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div>جملة مثال</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div>تمرين تفاعلي</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم الأول: الأساسيات ========== -->
+    <section id="basics">
+        <h2 class="section-title">📖 الأساسيات - أول 100 كلمة يجب أن تتعلمها</h2>
+        
+        <div class="lesson-grid">
+            <!-- بطاقة 1: الضمائر -->
+            <div class="lesson-card">
+                <div class="card-header">👤 الضمائر الشخصية</div>
+                <div class="card-content">
+                    <table class="word-table">
+                        <tr><th>English</th><th>العربية</th><th>النطق</th></tr>
+                        <tr><td class="english-word">I</td><td class="arabic-word">أنا</td><td class="pronunciation">آي</td></tr>
+                        <tr><td class="english-word">You</td><td class="arabic-word">أنت / أنتم</td><td class="pronunciation">يو</td></tr>
+                        <tr><td class="english-word">He</td><td class="arabic-word">هو</td><td class="pronunciation">هي</td></tr>
+                        <tr><td class="english-word">She</td><td class="arabic-word">هي</td><td class="pronunciation">شي</td></tr>
+                        <tr><td class="english-word">It</td><td class="arabic-word">هو / هي (لغير العاقل)</td><td class="pronunciation">إت</td></tr>
+                        <tr><td class="english-word">We</td><td class="arabic-word">نحن</td><td class="pronunciation">وي</td></tr>
+                        <tr><td class="english-word">They</td><td class="arabic-word">هم</td><td class="pronunciation">ذاي</td></tr>
+                    </table>
+                    
+                    <div class="example-box">
+                        <div class="example-english">📝 I am a student. - أنا طالب</div>
+                        <div class="example-english">She is a teacher. - هي معلمة</div>
+                        <div class="example-english">We are friends. - نحن أصدقاء</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بطاقة 2: أفعال شائعة -->
+            <div class="lesson-card">
+                <div class="card-header">⚡ أهم 20 فعل</div>
+                <div class="card-content">
+                    <table class="word-table">
+                        <tr><th>الفعل</th><th>المعنى</th><th>التصريف</th></tr>
+                        <tr><td>Be</td><td>يكون</td><td>was/were/been</td></tr>
+                        <tr><td>Have</td><td>يملك</td><td>had/had</td></tr>
+                        <tr><td>Do</td><td>يفعل</td><td>did/done</td></tr>
+                        <tr><td>Say</td><td>يقول</td><td>said/said</td></tr>
+                        <tr><td>Get</td><td>يحصل على</td><td>got/gotten</td></tr>
+                        <tr><td>Make</td><td>يصنع</td><td>made/made</td></tr>
+                        <tr><td>Go</td><td>يذهب</td><td>went/gone</td></tr>
+                        <tr><td>Know</td><td>يعرف</td><td>knew/known</td></tr>
+                        <tr><td>Take</td><td>يأخذ</td><td>took/taken</td></tr>
+                        <tr><td>See</td><td>يرى</td><td>saw/seen</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- بطاقة 3: الأرقام -->
+            <div class="lesson-card">
+                <div class="card-header">🔢 الأرقام من 1 إلى 100</div>
+                <div class="card-content">
+                    <div style="display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem;">
+                        <div>
+                            <h4>الأساسية</h4>
+                            <ul class="word-list">
+                                <li><span class="word-icon">1</span> One - واحد</li>
+                                <li><span class="word-icon">2</span> Two - اثنان</li>
+                                <li><span class="word-icon">3</span> Three - ثلاثة</li>
+                                <li><span class="word-icon">4</span> Four - أربعة</li>
+                                <li><span class="word-icon">5</span> Five - خمسة</li>
+                                <li><span class="word-icon">6</span> Six - ستة</li>
+                                <li><span class="word-icon">7</span> Seven - سبعة</li>
+                                <li><span class="word-icon">8</span> Eight - ثمانية</li>
+                                <li><span class="word-icon">9</span> Nine - تسعة</li>
+                                <li><span class="word-icon">10</span> Ten - عشرة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>العشرات</h4>
+                            <ul class="word-list">
+                                <li>Twenty - عشرون</li>
+                                <li>Thirty - ثلاثون</li>
+                                <li>Forty - أربعون</li>
+                                <li>Fifty - خمسون</li>
+                                <li>Sixty - ستون</li>
+                                <li>Seventy - سبعون</li>
+                                <li>Eighty - ثمانون</li>
+                                <li>Ninety - تسعون</li>
+                                <li>One hundred - مئة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم الثاني: المفردات (أكثر من 500 كلمة) ========== -->
+    <section id="vocabulary">
+        <h2 class="section-title">📚 المفردات - 500 كلمة أساسية</h2>
+
+        <div class="lesson-grid">
+            <!-- العائلة -->
+            <div class="lesson-card">
+                <div class="card-header">👨‍👩‍👧‍👦 العائلة</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>Father - أب</li>
+                        <li>Mother - أم</li>
+                        <li>Brother - أخ</li>
+                        <li>Sister - أخت</li>
+                        <li>Son - ابن</li>
+                        <li>Daughter - ابنة</li>
+                        <li>Grandfather - جد</li>
+                        <li>Grandmother - جدة</li>
+                        <li>Uncle - عم / خال</li>
+                        <li>Aunt - عمة / خالة</li>
+                        <li>Cousin - ابن عم / ابن خال</li>
+                        <li>Husband - زوج</li>
+                        <li>Wife - زوجة</li>
+                        <li>Parents - والدان</li>
+                        <li>Children - أطفال</li>
+                        <li>Baby - طفل رضيع</li>
+                        <li>Family - عائلة</li>
+                        <li>Relatives - أقارب</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- المنزل -->
+            <div class="lesson-card">
+                <div class="card-header">🏠 المنزل والأثاث</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>House - منزل</li>
+                        <li>Apartment - شقة</li>
+                        <li>Room - غرفة</li>
+                        <li>Living room - غرفة معيشة</li>
+                        <li>Bedroom - غرفة نوم</li>
+                        <li>Kitchen - مطبخ</li>
+                        <li>Bathroom - حمام</li>
+                        <li>Door - باب</li>
+                        <li>Window - نافذة</li>
+                        <li>Wall - حائط</li>
+                        <li>Floor - أرضية</li>
+                        <li>Ceiling - سقف</li>
+                        <li>Bed - سرير</li>
+                        <li>Table - طاولة</li>
+                        <li>Chair - كرسي</li>
+                        <li>Sofa - أريكة</li>
+                        <li>Desk - مكتب</li>
+                        <li>Lamp - مصباح</li>
+                        <li>Fridge - ثلاجة</li>
+                        <li>Oven - فرن</li>
+                        <li>Washing machine - غسالة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الملابس -->
+            <div class="lesson-card">
+                <div class="card-header">👕 الملابس</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>Clothes - ملابس</li>
+                        <li>Shirt - قميص</li>
+                        <li>T-shirt - تي شيرت</li>
+                        <li>Pants - بنطال</li>
+                        <li>Jeans - جينز</li>
+                        <li>Dress - فستان</li>
+                        <li>Skirt - تنورة</li>
+                        <li>Jacket - جاكيت</li>
+                        <li>Coat - معطف</li>
+                        <li>Sweater - كنزة</li>
+                        <li>Socks - جوارب</li>
+                        <li>Shoes - أحذية</li>
+                        <li>Boots - جزمة</li>
+                        <li>Hat - قبعة</li>
+                        <li>Scarf - وشاح</li>
+                        <li>Gloves - قفازات</li>
+                        <li>Belt - حزام</li>
+                        <li>Watch - ساعة يد</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الطعام والشراب -->
+            <div class="lesson-card">
+                <div class="card-header">🍎 الطعام والشراب</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>Food - طعام</li>
+                        <li>Drink - شراب</li>
+                        <li>Water - ماء</li>
+                        <li>Milk - حليب</li>
+                        <li>Juice - عصير</li>
+                        <li>Coffee - قهوة</li>
+                        <li>Tea - شاي</li>
+                        <li>Bread - خبز</li>
+                        <li>Rice - أرز</li>
+                        <li>Pasta - معكرونة</li>
+                        <li>Meat - لحم</li>
+                        <li>Chicken - دجاج</li>
+                        <li>Fish - سمك</li>
+                        <li>Eggs - بيض</li>
+                        <li>Cheese - جبن</li>
+                        <li>Vegetables - خضروات</li>
+                        <li>Fruit - فاكهة</li>
+                        <li>Apple - تفاح</li>
+                        <li>Banana - موز</li>
+                        <li>Orange - برتقال</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الحيوانات -->
+            <div class="lesson-card">
+                <div class="card-header">🐕 الحيوانات</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>Dog - كلب</li>
+                        <li>Cat - قطة</li>
+                        <li>Bird - طائر</li>
+                        <li>Fish - سمكة</li>
+                        <li>Horse - حصان</li>
+                        <li>Cow - بقرة</li>
+                        <li>Sheep - خروف</li>
+                        <li>Goat - ماعز</li>
+                        <li>Chicken - دجاجة</li>
+                        <li>Duck - بطة</li>
+                        <li>Lion - أسد</li>
+                        <li>Tiger - نمر</li>
+                        <li>Elephant - فيل</li>
+                        <li>Giraffe - زرافة</li>
+                        <li>Monkey - قرد</li>
+                        <li>Snake - ثعبان</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الطبيعة -->
+            <div class="lesson-card">
+                <div class="card-header">🌳 الطبيعة</div>
+                <div class="card-content">
+                    <ul class="word-list">
+                        <li>Nature - طبيعة</li>
+                        <li>Sky - سماء</li>
+                        <li>Sun - شمس</li>
+                        <li>Moon - قمر</li>
+                        <li>Star - نجم</li>
+                        <li>Cloud - سحابة</li>
+                        <li>Rain - مطر</li>
+                        <li>Snow - ثلج</li>
+                        <li>Wind - رياح</li>
+                        <li>Mountain - جبل</li>
+                        <li>Sea - بحر</li>
+                        <li>Ocean - محيط</li>
+                        <li>River - نهر</li>
+                        <li>Lake - بحيرة</li>
+                        <li>Forest - غابة</li>
+                        <li>Desert - صحراء</li>
+                        <li>Flower - زهرة</li>
+                        <li>Tree - شجرة</li>
+                        <li>Grass - عشب</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم الثالث: قواعد شاملة ========== -->
+    <section id="grammar">
+        <h2 class="section-title">📝 قواعد اللغة الإنجليزية (شرح كامل)</h2>
+
+        <!-- الأزمنة -->
+        <div class="lesson-grid">
+            <div class="lesson-card">
+                <div class="card-header">⏰ المضارع البسيط</div>
+                <div class="card-content">
+                    <div class="grammar-box">
+                        <h3>Present Simple</h3>
+                        <table class="grammar-table">
+                            <tr><th>الإثبات</th><th>النفي</th><th>السؤال</th></tr>
+                            <tr><td>I work</td><td>I don't work</td><td>Do I work?</td></tr>
+                            <tr><td>You work</td><td>You don't work</td><td>Do you work?</td></tr>
+                            <tr><td>He works</td><td>He doesn't work</td><td>Does he work?</td></tr>
+                            <tr><td>She works</td><td>She doesn't work</td><td>Does she work?</td></tr>
+                            <tr><td>It works</td><td>It doesn't work</td><td>Does it work?</td></tr>
+                            <tr><td>We work</td><td>We don't work</td><td>Do we work?</td></tr>
+                            <tr><td>They work</td><td>They don't work</td><td>Do they work?</td></tr>
+                        </table>
+                        <div class="example-box">
+                            <p>📌 نستخدم المضارع البسيط لـ:</p>
+                            <ul style="margin-right: 2rem;">
+                                <li>حقائق عامة: The sun rises in the east.</li>
+                                <li>عادات يومية: I wake up at 7 AM.</li>
+                                <li>حقائق دائمة: She lives in Cairo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <div class="card-header">⏰ الماضي البسيط</div>
+                <div class="card-content">
+                    <div class="grammar-box">
+                        <h3>Past Simple</h3>
+                        <table class="grammar-table">
+                            <tr><th>الإثبات</th><th>النفي</th><th>السؤال</th></tr>
+                            <tr><td>I worked</td><td>I didn't work</td><td>Did I work?</td></tr>
+                            <tr><td>You worked</td><td>You didn't work</td><td>Did you work?</td></tr>
+                            <tr><td>He worked</td><td>He didn't work</td><td>Did he work?</td></tr>
+                            <tr><td>She worked</td><td>She didn't work</td><td>Did she work?</td></tr>
+                            <tr><td>We worked</td><td>We didn't work</td><td>Did we work?</td></tr>
+                            <tr><td>They worked</td><td>They didn't work</td><td>Did they work?</td></tr>
+                        </table>
+                        <div class="example-box">
+                            <p>📌 الأفعال الشاذة:</p>
+                            <table style="width:100%">
+                                <tr><td>Go - Went</td><td>Eat - Ate</td></tr>
+                                <tr><td>See - Saw</td><td>Buy - Bought</td></tr>
+                                <tr><td>Come - Came</td><td>Drink - Drank</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <div class="card-header">⏰ المستقبل</div>
+                <div class="card-content">
+                    <div class="grammar-box">
+                        <h3>Future Tenses</h3>
+                        <table class="grammar-table">
+                            <tr><th>Will</th><th>Going to</th></tr>
+                            <tr><td>قرار فوري: I'll help you</td><td>خطة مسبقة: I'm going to travel</td></tr>
+                            <tr><td>توقع: It will rain</td><td>دليل: Look at those clouds</td></tr>
+                        </table>
+                        <div class="example-box">
+                            <p>I will call you tomorrow.</p>
+                            <p>She is going to study medicine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- المزيد من القواعد -->
+        <div class="lesson-grid">
+            <div class="lesson-card">
+                <div class="card-header">📌 حروف الجر</div>
+                <div class="card-content">
+                    <h3>Prepositions</h3>
+                    <ul class="word-list">
+                        <li>In - في (داخل)</li>
+                        <li>On - على (سطح)</li>
+                        <li>At - في (مكان محدد)</li>
+                        <li>Under - تحت</li>
+                        <li>Above - فوق</li>
+                        <li>Between - بين</li>
+                        <li>Next to - بجانب</li>
+                        <li>Behind - خلف</li>
+                        <li>In front of - أمام</li>
+                    </ul>
+                    <div class="example-box">
+                        The book is on the table.<br>
+                        I live in Cairo.<br>
+                        She is at school.
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <div class="card-header">🔗 أدوات الربط</div>
+                <div class="card-content">
+                    <h3>Connectors</h3>
+                    <ul class="word-list">
+                        <li>And - و</li>
+                        <li>But - لكن</li>
+                        <li>Or - أو</li>
+                        <li>Because - لأن</li>
+                        <li>So - لذلك</li>
+                        <li>Although - على الرغم من</li>
+                        <li>However - ومع ذلك</li>
+                    </ul>
+                    <div class="example-box">
+                        I like tea but I don't like coffee.<br>
+                        She stayed home because she was sick.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم الرابع: المحادثات ========== -->
+    <section id="conversation">
+        <h2 class="section-title">💬 محادثات في مواقف حقيقية</h2>
+
+        <div class="lesson-grid">
+            <div class="lesson-card">
+                <div class="card-header">🛒 في المطعم</div>
+                <div class="card-content">
+                    <div class="example-box">
+                        <p><strong>Waiter:</strong> Welcome to our restaurant. What would you like to order?</p>
+                        <p><strong>Customer:</strong> I'd like a chicken sandwich and a glass of water, please.</p>
+                        <p><strong>Waiter:</strong> Would you like fries with that?</p>
+                        <p><strong>Customer:</strong> Yes, please. How much is that?</p>
+                        <p><strong>Waiter:</strong> That will be $12.50.</p>
+                    </div>
+                    <div style="background: #f0f7ff; padding: 1rem; border-radius: 15px; margin-top: 1rem;">
+                        <p><strong>الترجمة:</strong></p>
+                        <p>النادل: مرحباً بك في مطعمنا. ماذا تريد أن تطلب؟</p>
+                        <p>الزبون: أريد ساندويتش دجاج وكوب ماء من فضلك.</p>
+                        <p>النادل: هل تريد بطاطا مقلية معها؟</p>
+                        <p>الزبون: نعم من فضلك. كم ثمنها؟</p>
+                        <p>النادل: 12.50 دولار.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <div class="card-header">🏨 في الفندق</div>
+                <div class="card-content">
+                    <div class="example-box">
+                        <p><strong>Guest:</strong> I have a reservation under the name Ahmed Hassan.</p>
+                        <p><strong>Receptionist:</strong> Welcome, Mr. Hassan. Your room is 405 on the fourth floor.</p>
+                        <p><strong>Guest:</strong> What time is breakfast?</p>
+                        <p><strong>Receptionist:</strong> Breakfast is served from 7 to 10 AM.</p>
+                        <p><strong>Guest:</strong> Is there free Wi-Fi?</p>
+                        <p><strong>Receptionist:</strong> Yes, the password is on the card.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <div class="card-header">🏥 عند الطبيب</div>
+                <div class="card-content">
+                    <div class="example-box">
+                        <p><strong>Doctor:</strong> What seems to be the problem?</p>
+                        <p><strong>Patient:</strong> I have a headache and I feel tired.</p>
+                        <p><strong>Doctor:</strong> How long have you been feeling this way?</p>
+                        <p><strong>Patient:</strong> For two days.</p>
+                        <p><strong>Doctor:</strong> I'll prescribe some medicine. Rest and drink plenty of water.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم الخامس: تمارين تفاعلية ========== -->
+    <section id="exercises" class="practice-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">✏️ تمارين تفاعلية</h2>
+        <div class="exercise-grid">
+            <!-- تمرين 1 -->
+            <div class="exercise-card" id="ex1">
+                <div class="exercise-question">1. She _____ to school every day.</div>
+                <div class="exercise-options">
+                    <div class="exercise-option" onclick="checkExercise('ex1', 'go', this)">go</div>
+                    <div class="exercise-option" onclick="checkExercise('ex1', 'goes', this)">goes</div>
+                    <div class="exercise-option" onclick="checkExercise('ex1', 'going', this)">going</div>
+                </div>
+                <div class="exercise-feedback" id="feedback-ex1"></div>
+            </div>
+
+            <!-- تمرين 2 -->
+            <div class="exercise-card" id="ex2">
+                <div class="exercise-question">2. They _____ playing football now.</div>
+                <div class="exercise-options">
+                    <div class="exercise-option" onclick="checkExercise('ex2', 'is', this)">is</div>
+                    <div class="exercise-option" onclick="checkExercise('ex2', 'am', this)">am</div>
+                    <div class="exercise-option" onclick="checkExercise('ex2', 'are', this)">are</div>
+                </div>
+                <div class="exercise-feedback" id="feedback-ex2"></div>
+            </div>
+
+            <!-- تمرين 3 -->
+            <div class="exercise-card" id="ex3">
+                <div class="exercise-question">3. I _____ a student.</div>
+                <div class="exercise-options">
+                    <div class="exercise-option" onclick="checkExercise('ex3', 'is', this)">is</div>
+                    <div class="exercise-option" onclick="checkExercise('ex3', 'am', this)">am</div>
+                    <div class="exercise-option" onclick="checkExercise('ex3', 'are', this)">are</div>
+                </div>
+                <div class="exercise-feedback" id="feedback-ex3"></div>
+            </div>
+
+            <!-- تمرين 4 -->
+            <div class="exercise-card" id="ex4">
+                <div class="exercise-question">4. _____ you like coffee?</div>
+                <div class="exercise-options">
+                    <div class="exercise-option" onclick="checkExercise('ex4', 'Does', this)">Does</div>
+                    <div class="exercise-option" onclick="checkExercise('ex4', 'Do', this)">Do</div>
+                    <div class="exercise-option" onclick="checkExercise('ex4', 'Are', this)">Are</div>
+                </div>
+                <div class="exercise-feedback" id="feedback-ex4"></div>
+            </div>
+
+            <!-- تمرين 5 -->
+            <div class="exercise-card" id="ex5">
+                <div class="exercise-question">5. He _____ (watch) TV yesterday.</div>
+                <div class="exercise-options">
+                    <div class="exercise-option" onclick="checkExercise('ex5', 'watch', this)">watch</div>
+                    <div class="exercise-option" onclick="checkExercise('ex5', 'watched', this)">watched</div>
+                    <div class="exercise-option" onclick="checkExercise('ex5', 'watching', this)">watching</div>
+                </div>
+                <div class="exercise-feedback" id="feedback-ex5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== القسم السادس: الموارد ========== -->
+    <section id="resources">
+        <h2 class="section-title">📦 الموارد والمراجع</h2>
+        <div class="resources-grid">
+            <div class="resource-item">
+                <div class="resource-icon">📚</div>
+                <h3>كتب PDF</h3>
+                <p>أكثر من 50 كتاب لتعلم الإنجليزية</p>
+                <a href="#" class="btn-small" style="margin-top: 1rem;">تحميل</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">🎧</div>
+                <h3>بودكاست</h3>
+                <p>حلقات صوتية لتحسين الاستماع</p>
+                <a href="#" class="btn-small">استمع الآن</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">🎬</div>
+                <h3>فيديوهات</h3>
+                <p>دروس فيديو مع ترجمة</p>
+                <a href="#" class="btn-small">شاهد</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">📝</div>
+                <h3>أوراق عمل</h3>
+                <p>تمارين PDF قابلة للطباعة</p>
+                <a href="#" class="btn-small">تحميل</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== نصائح إضافية ========== -->
+    <section style="margin: 4rem 0;">
+        <h2 class="section-title">💡 نصائح لتعلم أسرع</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div style="background: white; padding: 2rem; border-radius: 20px;">
+                <h3 style="color: #003153;">1️⃣ يومياً</h3>
+                <p>احفظ 10 كلمات جديدة كل يوم وراجعها قبل النوم</p>
+            </div>
+            <div style="background: white; padding: 2rem; border-radius: 20px;">
+                <h3 style="color: #003153;">2️⃣ استمع</h3>
+                <p>شاهد الأفلام والمسلسلات بترجمة إنجليزية</p>
+            </div>
+            <div style="background: white; padding: 2rem; border-radius: 20px;">
+                <h3 style="color: #003153;">3️⃣ تحدث</h3>
+                <p>تدرب على المحادثة مع أصدقائك أو عبر التطبيقات</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ========== الفوتر ========== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <h3 style="color: white;">الموسوعة الشاملة</h3>
+            <p>أكبر موقع عربي لتعلم الإنجليزية</p>
+        </div>
+        <div>
+            <h4 style="color: white;">روابط سريعة</h4>
+            <p><a href="#basics" style="color: #ffb347; text-decoration: none;">الأساسيات</a></p>
+            <p><a href="#vocabulary" style="color: #ffb347; text-decoration: none;">المفردات</a></p>
+        </div>
+        <div>
+            <h4 style="color: white;">تواصل معنا</h4>
+            <p>📧 info@englishzone.com</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #3a5a70;">
+        © 2025 جميع الحقوق محفوظة
+    </div>
+</footer>
+
+<!-- ========== JavaScript للتمارين ========== -->
+<script>
+function checkExercise(exId, correctAnswer, element) {
+    // إزالة التحديد السابق
+    const card = document.getElementById(exId);
+    const options = card.querySelectorAll('.exercise-option');
+    options.forEach(opt => {
+        opt.style.background = '#f0f7ff';
+        opt.style.borderColor = '#e0e0e0';
+    });
+    
+    // تحديد الإجابة المختارة
+    element.style.background = '#ffb347';
+    element.style.borderColor = '#ffb347';
+    
+    // عرض النتيجة
+    const feedback = document.getElementById(`feedback-${exId}`);
+    const selectedText = element.textContent.trim();
+    
+    if (selectedText === correctAnswer) {
+        feedback.style.display = 'block';
+        feedback.innerHTML = '✅ إجابة صحيحة! أحسنت';
+        feedback.style.background = '#d4edda';
+        feedback.style.color = '#155724';
+    } else {
+        feedback.style.display = 'block';
+        feedback.innerHTML = '❌ إجابة خاطئة. حاول مرة أخرى';
+        feedback.style.background = '#f8d7da';
+        feedback.style.color = '#721c24';
+    }
+}
+</script>
+
+<style>
+.btn-small {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #ffb347;
+    color: #003153;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background: #ffa01e;
+    transform: scale(1.05);
+}
+</style>
+
+</body>
+</html>
